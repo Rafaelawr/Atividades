@@ -6,7 +6,7 @@ from database import db
 
 bp_atividade = Blueprint('bp_atividade', __name__)
 
-@bp_atividade.route('/atividade', methodos=['POST'])
+@bp_atividade.route('/atividade', methods=['POST'])
 def criar_atividade():
     dados = request.json
     try:
