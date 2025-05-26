@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from  models import atividade_model 
 from database import db
-import requests
+
 
 
 bp_atividade = Blueprint('bp_atividade', __name__)
