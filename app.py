@@ -1,7 +1,6 @@
-from flask import Flask
 from database import app, db
 from controllers.route_atividade import routes
-
+from flask_sqlalchemy import SQLAlchemy
 
 app.register_blueprint(routes)
 
