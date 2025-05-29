@@ -40,8 +40,12 @@ ________________________________________________________________________________
 Explicação da Arquitetura
 
 A API segue uma arquitetura RESTful, com separação clara entre os recursos e suas respectivas operações CRUD. Os principais componentes são:
+
+
 ![image](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 Flask: Utilizado como framework web para gerenciar requisições HTTP e lógica de negócios.
+
+
 ![image](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 SQLAlchemy: Gerencia o acesso ao banco de dados relacional, permitindo mapeamento objeto-relacional (ORM).
 
