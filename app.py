@@ -1,8 +1,8 @@
 from flask import Flask
-from config import Config, db
-from database import app, db
+from database import create_app, db
 from controllers.route_atividade import bp_atividade
 
+app = create_app()
 
 app.register_blueprint(bp_atividade)
 
