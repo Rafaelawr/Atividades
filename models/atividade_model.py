@@ -11,15 +11,15 @@ class Atividade(db.Model):
     observacoes = db.Column(db.Text)
     
         
-professor = db.relationship('Professor', backref='atividades', lazy=True)
+    professor = db.relationship('Professor', backref='atividades', lazy=True)
 
-def __init__(self, id_professor, nome_atividade, descricao=None, observacoes=None):
+    def __init__(self, id_professor, nome_atividade, descricao=None, observacoes=None):
         self.id_professor = id_professor
         self.nome_atividade = nome_atividade
         self.descricao = descricao
         self.observacoes = observacoes
         
-def to_dict(self):
+    def to_dict(self):
         return {
             'id': self.id,
             'id_professor': self.id_professor,
@@ -47,6 +47,6 @@ def adicionar_atividade(atividade_data):
         observacoes=atividade_data.get('observacoes')
     )
         
-db.session.add(nova_atividade)
-db.session.commit()
-return nova_atividade.to_dict()
+    db.session.add(nova_atividade)
+    db.session.commit()
+    return nova_atividade.to_dict()
