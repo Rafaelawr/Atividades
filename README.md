@@ -1,5 +1,5 @@
 API de Registro de Atividades Escolares
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
+
 Descrição da API
 
 Esta API foi desenvolvida para facilitar o registro e gerenciamento de atividades escolares. Com ela, professores e administradores podem criar, consultar, atualizar e excluir registros de atividades realizadas por estudantes. A API foi construída utilizando o framework Flask, seguindo boas práticas de desenvolvimento para garantir performance e segurança.
@@ -25,7 +25,7 @@ Clone o repositório:
 git clone <URL_DO_REPOSITORIO>
 cd <PASTA_DO_REPOSITORIO>
 
-Construa e inicie os serviços com Docker Compose:
+(https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) Construa e inicie os serviços com Docker Compose:
 
 docker-compose up --build
 
