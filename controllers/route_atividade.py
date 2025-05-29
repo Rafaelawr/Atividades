@@ -10,25 +10,24 @@ bp_atividade = Blueprint('bp_atividade', __name__)
 def criar_atividade():
     dados = request.json
     try:
-        nova_atividade = atividade_model.criar_atividade(dados)
+        nova_atividade = atividade_model.adicionar_atividade(dados)
         return jsonify(nova_atividade), 201
     except Exception as e:
         return jsonify({'error': str(e)}), 400
-@bp_atividade.route('/atividade', methods=['POST']) 
 
 
 
 @bp_atividade.route('/atividade', methods=['GET'])
 def listar_atividade():
-    atividades = atividade_model.listar_atividade()
+    atividades = atividade_model.listar_atividades()
     return jsonify(atividades)
 
 
 @bp_atividade.route('/atividade/<int:id_atividade>', methods=['GET'])
 def buscar_atividade(id_atividade):
     try:
-        atividade = atividade_model.buscar_atividade(id_atividade)
+        atividade = atividade_model.buscar_atividade_por_id(id_atividade)
         return jsonify(atividade)
-    except atividade_model.AtividadeNotFound:
+    except atividade_model.AtividadeNaoEncontrada:
         return jsonify({'error': 'Atividade não encontrada'}), 404
 
