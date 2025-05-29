@@ -25,7 +25,7 @@ Clone o repositório:
 git clone <URL_DO_REPOSITORIO>
 cd <PASTA_DO_REPOSITORIO>
 
-(https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) Construa e inicie os serviços com Docker Compose:
+![image](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) Construa e inicie os serviços com Docker Compose:
 
 docker-compose up --build
 
