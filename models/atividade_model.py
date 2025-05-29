@@ -5,7 +5,7 @@ class Atividade(db.Model):
     __tablename__ = 'atividade'
     
     id = db.Column(db.Integer, primary_key=True)
-    id_professor = db.Column(db.Integer, db.ForeignKey('professor.id'))
+    id_professor = db.Column(db.Integer, nullable=False)
     nome_atividade = db.Column(db.String(100), nullable=False)
     descricao = db.Column(db.String(200), nullable=True)
     observacoes = db.Column(db.Text)
