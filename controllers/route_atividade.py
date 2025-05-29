@@ -6,6 +6,7 @@ from database import db
 
 bp_atividade = Blueprint('bp_atividade', __name__)
 
+#Criar nova rota
 @bp_atividade.route('/atividade', methods=['POST'])
 def criar_atividade():
     dados = request.json
@@ -13,15 +14,19 @@ def criar_atividade():
         nova_atividade = atividade_model.adicionar_atividade(dados)
         return jsonify(nova_atividade), 201
     except Exception as e:
-        return jsonify({'error': str(e)}), 400
+        return jsonify({'error': str(e)}), 500
 
 
-
+#Listar todas as atividades
 @bp_atividade.route('/atividade', methods=['GET'])
 def listar_atividade():
-    atividades = atividade_model.listar_atividades()
-    return jsonify(atividades)
+    try:
+        atividades = atividade_model.listar_atividades()
+        return jsonify(atividades),200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
+#Buscar atividade por ID
 
 @bp_atividade.route('/atividade/<int:id_atividade>', methods=['GET'])
 def buscar_atividade(id_atividade):
@@ -30,4 +35,5 @@ def buscar_atividade(id_atividade):
         return jsonify(atividade)
     except atividade_model.AtividadeNaoEncontrada:
         return jsonify({'error': 'Atividade não encontrada'}), 404
-
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
