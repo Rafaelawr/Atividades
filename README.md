@@ -1,10 +1,9 @@
-API de Registro de Atividades Escolares
+#API Escolar com Flask + SQLAlchemy
 
-Descrição da API
 
 Esta API foi desenvolvida para facilitar o registro e gerenciamento de atividades escolares. Com ela, professores e administradores podem criar, consultar, listar e registrar  as atividades realizadas por estudantes. A API foi construída utilizando o framework Flask, seguindo boas práticas de desenvolvimento para garantir performance e segurança.
 
-Principais Funcionalidades
+#Principais Funcionalidades
 
 Registro de atividades: Permite o cadastro de atividades realizadas pelos alunos.
 
